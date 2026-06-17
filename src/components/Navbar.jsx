@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Logo from "../assets/navbar/logo.svg";
 import Button from "./Button";
-import { Menu } from "lucide-react";
+import { Menu, X } from "lucide-react";
 
 const navItems = [
   { label: "Events", active: true },
@@ -27,69 +27,111 @@ function Navbar() {
         <nav className="hidden md:block">
           <ul className="flex items-center gap-8 lg:gap-12">
             {navItems.map((item) => (
-             <li
-  key={item.label}
-  className="
-    relative
-    text-white
-    font-['Orbitron']
-    text-[22px]
-    cursor-pointer
-    h-[110px]
-    flex items-center
-  "
->
-  {item.label}
+              <li
+                key={item.label}
+                className="
+                  relative
+                  text-white
+                  font-['Orbitron']
+                  text-[22px]
+                  cursor-pointer
+                  h-[110px]
+                  flex items-center
+                "
+              >
+                {item.label}
 
-  {item.active && (
-    <span
-      className="
-        absolute
-        bottom-0
-        left-1/2
-        -translate-x-1/2
-        w-[110px]
-        h-[5px]
-        bg-[#FF4C4C]
-      "
-    />
-  )}
-</li>
+                {item.active && (
+                  <span
+                    className="
+                      absolute
+                      bottom-0
+                      left-1/2
+                      -translate-x-1/2
+                      w-[110px]
+                      h-[5px]
+                      bg-[#FF4C4C]
+                    "
+                  />
+                )}
+              </li>
             ))}
           </ul>
         </nav>
 
         {/* Desktop Buttons */}
         <div className="hidden md:flex items-center gap-4">
-          <Button variant="outline">LOGIN</Button>
-          <Button>REGISTER NOW</Button>
+          <Button
+            variant="outline"
+            className="w-[121px] h-[43px] text-[18px] rounded-[8px]"
+          >
+            LOGIN
+          </Button>
+
+          <Button
+            variant="primary"
+            className="w-[163px] h-[43px] text-[18px] rounded-[8px]"
+          >
+            REGISTER NOW
+          </Button>
         </div>
 
-        {/* Mobile Menu */}
+        {/* Mobile Menu Button */}
         <button
-          className="md:hidden text-white"
+          className="md:hidden text-white p-10"
           onClick={() => setIsMenuOpen(!isMenuOpen)}
         >
-          <Menu size={32} />
+          {isMenuOpen ? <X size={30} /> : <Menu size={30} />}
         </button>
       </div>
 
       {/* Mobile Dropdown */}
       {isMenuOpen && (
-        <div className="md:hidden bg-[#1A1919] border-t border-gray-700">
-          <ul className="flex flex-col items-center gap-6 py-6">
+        <div className="md:hidden bg-[#1A1919] border-t border-gray-700 py-4">
+          <ul className="flex flex-col items-center gap-5 py-6">
             {navItems.map((item) => (
               <li
                 key={item.label}
-                className="text-white font-['Orbitron'] text-lg"
+                className="
+                  relative
+                  text-white
+                  font-['Orbitron']
+                  text-lg
+                  py-1
+                "
               >
                 {item.label}
+
+                {item.active && (
+                  <span
+                    className="
+                      absolute
+                      left-1/2
+                      -translate-x-1/2
+                      -bottom-1
+                      w-[50px]
+                      h-[3px]
+                      bg-[#FF4C4C]
+                    "
+                  />
+                )}
               </li>
             ))}
 
-            <div className="flex flex-col gap-3 mt-2">
-              <Button variant="outline">LOGIN</Button>
-              <Button>REGISTER NOW</Button>
+            <div className="flex flex-col items-center gap-3 mt-4">
+              <Button
+                variant="outline"
+                className="w-[140px] h-[40px] text-[14px] rounded-[8px]"
+              >
+                LOGIN
+              </Button>
+
+              <Button
+                variant="primary"
+                className="w-[140px] h-[40px] text-[14px] rounded-[8px]"
+              >
+                REGISTER NOW
+              </Button>
             </div>
           </ul>
         </div>
