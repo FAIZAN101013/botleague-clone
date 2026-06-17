@@ -3,18 +3,20 @@ import Button from "./Button";
 
 function Hero() {
   return (
-    <section className="relative h-[620px] overflow-hidden bg-black">
+    <section className="relative  min-h-[620px] overflow-hidden bg-black">
       {/* Hero Image */}
       <img
         src={heroImage}
         alt="BotLeague Arena"
         className="
           absolute
-          top-0
-          left-[363px]
-          w-[1077px]
-          h-[621px]
-          object-cover
+  top-0
+  left-0
+  md:left-[363px]
+  w-full
+  md:w-[1077px]
+  h-full
+  object-cover
         "
       />
 
@@ -23,7 +25,7 @@ function Hero() {
   className="
     absolute
     top-0
-    left-[294px]
+    left-[272px]
     w-[453px]
     h-full
     z-10
@@ -67,11 +69,17 @@ function Hero() {
       </div>
 
       {/* Left Content */}
-      <div className="relative z-10 pl-[81px] pt-[145px]">
+      <div className=" relative
+  z-10
+  px-6
+  md:pl-[81px]
+  pt-[100px]
+  md:pt-[145px]">
         <h1
           className="
             font-['Orbitron']
-            text-[72px]
+            text-[38px]
+md:text-[72px]
             font-semibold
             leading-[100%]
             tracking-[0.02em]
@@ -88,7 +96,8 @@ function Hero() {
           className="
             mt-6
             max-w-[500px]
-            text-[28px]
+           text-[18px]
+md:text-[28px]
             leading-[1.2]
             font-medium
             text-[#D9D9D9]
@@ -99,17 +108,25 @@ function Hero() {
           Ecosystem for Robotics Arena
         </p>
 
-        <div className="flex gap-4 mt-6">
+        <div className="flex flex-col md:flex-row gap-4 mt-6">
           <Button
   variant="gradient"
-  className="w-[236px] h-[52px] text-[21px]"
+  className="  w-full
+  max-w-[236px]
+  h-[52px]
+  text-[18px]
+  md:text-[21px]"
 >
   CREATE ACCOUNT
 </Button>
 
 <Button
   variant="outline"
-  className="w-[236px] h-[52px] text-[21px]"
+  className="  w-full
+  max-w-[236px]
+  h-[52px]
+  text-[18px]
+  md:text-[21px]"
 >
   EXPLORE EVENTS
 </Button>
