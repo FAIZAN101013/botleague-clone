@@ -11,6 +11,7 @@ function FooterCard({ title }) {
         rounded-[15px]
         px-[25px]
         pt-[28px]
+        ml-6    
       
       "
     >
