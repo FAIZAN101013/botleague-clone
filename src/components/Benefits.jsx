@@ -1,7 +1,7 @@
-import i1 from "../assets/benefits/i1.svg";
-import i2 from "../assets/benefits/i2.svg";
-import i3 from "../assets/benefits/i3.svg";
-import i4 from "../assets/benefits/i4.svg";
+import i1 from "../assets/benefits/I1.svg";
+import i2 from "../assets/benefits/I2.svg";
+import i3 from "../assets/benefits/I3.svg";
+import i4 from "../assets/benefits/I4.svg";
 
 import bg from "../assets/benefits/bg.png";
 
