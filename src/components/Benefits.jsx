@@ -30,9 +30,9 @@ function Benefits() {
   ];
 
   return (
-    <section className="bg-[#1A1919]">
-      <div className="max-w-[1440px] mx-auto px-[90px] py-[40px]">
-        <div className="flex items-start gap-12">
+    <section className="bg-[#1A1919] ">
+      <div className="max-w-[1440px] mx-auto px-[90px] py-[40px] ">
+        <div className="flex items-start gap-12 mb-20 mt-20">
           {/* LEFT SIDE */}
           <div className="w-[620px] flex-shrink-0">
             <p

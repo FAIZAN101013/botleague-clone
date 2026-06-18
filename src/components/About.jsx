@@ -9,7 +9,7 @@ import CategoryCard from "./about/CategoryCard";
 
 function About() {
   return (
-    <section className="relative bg-[#1A1919] py-20 overflow-hidden">
+    <section className="relative bg-[#1A1919] py-20 overflow-hidden mb-0">
       {/* Right Illustration */}
       <img
         src={bgImage}

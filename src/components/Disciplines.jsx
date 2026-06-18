@@ -50,6 +50,8 @@ function Disciplines() {
           px-[68px]
           py-[80px]
           overflow-hidden
+         
+
         "
       >
         {/* Background Circuit */}
@@ -106,7 +108,7 @@ function Disciplines() {
             ))}
           </div>
 
-          <div className="grid grid-cols-2 gap-5 max-w-[620px]">
+          <div className="grid grid-cols-2 gap-5 max-w-[620px] ">
             {disciplines.slice(4).map((item) => (
               <DisciplineCard
                 key={item.title}
