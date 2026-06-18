@@ -1,7 +1,7 @@
-import step1 from "../assets/userJourney/step1.svg";
-import step2 from "../assets/userJourney/step2.svg";
-import step3 from "../assets/userJourney/step3.svg";
-import step4 from "../assets/userJourney/step4.svg";
+import step1 from "../assets/userjourney/step1.svg";
+import step2 from "../assets/userjourney/step2.svg";
+import step3 from "../assets/userjourney/step3.svg";
+import step4 from "../assets/userjourney/step4.svg";
 
 function UserJourney() {
   return (
