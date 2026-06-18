@@ -86,7 +86,7 @@ whitespace-nowrap
 
       <div className="mt-8">
         <Button className="w-full h-[55px]">
-          SIGN UP
+          SIGN U
         </Button>
       </div>
     </div>
